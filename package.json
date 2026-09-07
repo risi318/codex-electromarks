@@ -1,0 +1,31 @@
+{
+  "name": "electromarks",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open /app.html",
+    "build": "tsc -b && vite build && npm run build:standalone",
+    "build:standalone": "mkdir -p standalone && esbuild src/main.tsx --bundle --format=iife --platform=browser --target=es2020 --loader:.ttf=dataurl --outfile=standalone/electromarks.js",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
+    "@vitejs/plugin-react": "latest",
+    "dejavu-fonts-ttf": "^2.37.3",
+    "jspdf": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "esbuild": "latest",
+    "typescript": "latest",
+    "vitest": "^5.0.0"
+  }
+}
