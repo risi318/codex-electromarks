@@ -1,0 +1,6 @@
+.grid-label[draggable] { cursor: grab; }
+.grid-label[draggable]:active { cursor: grabbing; }
+.grid-label img { pointer-events: none; }
+.drop-preview { position: absolute; top: 0; bottom: 0; pointer-events: none; z-index: 5; border: 2px dashed; }
+.drop-preview--valid { border-color: #176d6c; background: #39b8b72b; }
+.drop-preview--invalid { border-color: #b63e20; background: #f36b452b; }

@@ -1,0 +1,11 @@
+/* Cells and labels share one explicit row; labels never create implicit rows. */
+.grid { border-radius: 0; }
+.grid-label .grid-zone { padding: 0 3px; }
+.grid-label { position: relative; width: calc(100% + 1px); }
+.grid-label::before { content: ''; position: absolute; inset: 0; z-index: 1; border-top: 1px solid #bca382; border-bottom: 1px solid #bca382; pointer-events: none; }
+.module { border-right: 0; }
+.module-divider, .group-boundary { position: absolute; top: 0; bottom: 0; width: 1px; background: #bca382; pointer-events: none; }
+.module-divider { z-index: 0; }
+.group-boundary { z-index: 4; }
+.merged-bottom-zone { z-index: 3; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0 3px; border-top: .5px solid #bca382; border-bottom: 1px solid #bca382; line-height: 1.2; font-weight: 700; text-align: center; overflow: hidden; overflow-wrap: anywhere; pointer-events: none; }
+.selection-outline { position: absolute; top: 0; z-index: 4; border: 2px solid var(--coral); box-shadow: 0 0 0 2px #f36b4533; pointer-events: none; }
